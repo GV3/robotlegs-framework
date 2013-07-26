@@ -57,14 +57,33 @@ package robotlegs.bender.extensions.commandCenter.impl
 		/**
 		 * @inheritDoc
 		 */
-		public function executeCommands(mappings:Vector.<ICommandMapping>, payload:CommandPayload = null):void
+		public function executeCommands(
+                mappings:Vector.<ICommandMapping>,
+                payload:CommandPayload,
+                signalClassName:String = null
+                ):void
 		{
 			const length:int = mappings.length;
 			for (var i:int = 0; i < length; i++)
 			{
+                mapSignal(signalClassName);
 				executeCommand(mappings[i], payload);
+                unmapSignal();
 			}
 		}
+
+      private function mapSignal(signalClassName:String):void {
+        unmapSignal();
+        _injector.map(String, 'trigger').toValue(signalClassName);
+		}
+
+        private function unmapSignal():void {
+            var hasMapping:Boolean;
+            hasMapping = _injector.hasDirectMapping(String, 'trigger');
+            if (hasMapping) {
+                _injector.unmap(String, 'trigger');
+            }
+        }
 
 		/**
 		 * @inheritDoc

@@ -7,8 +7,7 @@
 
 package robotlegs.bender.extensions.commandCenter.api
 {
-
-	/**
+/**
 	 * @private
 	 */
 	public interface ICommandExecutor
@@ -25,6 +24,10 @@ package robotlegs.bender.extensions.commandCenter.api
 		 * @param mappings The Command Mappings
 		 * @param payload The Command Payload
 		 */
-		function executeCommands(mappings:Vector.<ICommandMapping>, payload:CommandPayload = null):void;
+		function executeCommands(
+                mappings:Vector.<ICommandMapping>,
+                payload:CommandPayload,
+                signalClassName:String = null
+                ):void;
 	}
 }

@@ -87,7 +87,7 @@ package robotlegs.bender.extensions.directCommandMap.impl
 		 */
 		public function execute(payload:CommandPayload = null):void
 		{
-			_executor.executeCommands(_mappings.getList(), payload);
+			_executor.executeCommands(_mappings.getList(), payload, "");
 		}
 
 		/**

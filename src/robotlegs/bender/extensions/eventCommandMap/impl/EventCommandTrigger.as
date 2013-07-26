@@ -115,7 +115,7 @@ package robotlegs.bender.extensions.eventCommandMap.impl
 			{
 				return;
 			}
-			_executor.executeCommands(_mappings.getList(), new CommandPayload([event], [payloadEventClass]));
+			_executor.executeCommands(_mappings.getList(), new CommandPayload([event], [payloadEventClass]), "");
 		}
 	}
 }
