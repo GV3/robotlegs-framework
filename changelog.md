@@ -2,6 +2,24 @@
 
 ## Robotlegs 2
 
+### Next: v2.2.2
+
+ViewInjectionProcessor now caches views weakly
+
+### v2.2.1
+
+Updates Swiftsuspenders to v2.1.0
+
+Destroys more aggressively 
+
+### v2.2.0
+
+Updates Swiftsuspenders to v2.0.0 release
+
+Fixes #161 - Mediator synchronisation
+
+Adds metadata check to VigilanceExtension
+
 ### v2.1.0
 
 EventMap - opens up routeEventToListener

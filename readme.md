@@ -20,6 +20,10 @@ The framework documentation exists as README files in the repository. The best w
 
 [Support](http://knowledge.robotlegs.org/)
 
+### Developed with pleasure using IntelliJ IDEA
+
+<a href="http://www.jetbrains.com/idea/features/flex_ide.html"><img src="http://www.jetbrains.com/idea/opensource/img/all/banners/idea468x60_white.gif"></a>
+
 ## Robotlegs 2 (What's New?)
 
 + The fluent API makes your code more readable
